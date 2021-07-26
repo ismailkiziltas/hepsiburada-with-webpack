@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px !important;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: gray;
+
+    &:hover {
+        color: rgb(84, 81, 81);
+        text-decoration: none;
+    }
+}
+ul,ol{
+    list-style-type: none !important;
+    padding: 0;
+    margin: 0;
+}
