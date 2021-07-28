@@ -1,10 +1,8 @@
-const categories = [
-    {
+const categories = [{
         id: 1,
         title: "Elektronik",
         url: "#",
-        children: [
-            {
+        children: [{
                 id: 7,
                 parent_id: 1,
                 title: "Bilgisayar",
@@ -12,8 +10,14 @@ const categories = [
             },
             {
                 id: 8,
-                parent_id: 1,
+                parent_id: 2,
                 title: "Monitör",
+                url: "#"
+            },
+            {
+                id: 9,
+                parent_id: 3,
+                title: "Tablet",
                 url: "#"
             }
         ]
@@ -26,7 +30,33 @@ const categories = [
     {
         id: 3,
         title: "Ev, Yaşam, Kırtasiye, Ofis",
-        url: "#"
+        url: "#",
+        children: [{
+                id: 10,
+                parent_id:1,
+                title:"Kalem",
+                url:"#"
+            },
+            {
+                id: 11,
+                parent_id:2,
+                title:"Silgi",
+                url:"#"
+            },
+            {
+                id: 12,
+                parent_id:3,
+                title:"Açacak",
+                url:"#"
+            },
+            {
+                id: 13,
+                parent_id:4,
+                title:"Defter",
+                url:"#"
+            }
+
+        ]
     },
     {
         id: 4,

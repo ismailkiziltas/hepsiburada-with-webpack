@@ -17,37 +17,33 @@ const Category = {
         },
 
         tree: (item) => {
-            document.querySelector(Selector.categories).appendChild(Category.create.item(item, {
-                item: Selector.classes.categories.item,
-                link: Selector.classes.categories.link,
-                children: {
-                    list: Selector.classes.categories.children.list,
-                    item: Selector.classes.categories.children.item,
-                    link: Selector.classes.categories.children.link
-                }
-            }))
+            document.querySelector(Selector.categories).appendChild(Category.create.item(item))
         },
 
-        item: (item, classes) => {
+        item: (item) => {
             const categoryItem = document.createElement("li");
-            categoryItem.className = classes.item;
-            categoryItem.innerHTML += `<a href="${item.url}" class="${classes.link}">${item.title}</a>`;
+            categoryItem.className = Selector.classes.categories.item;
+            categoryItem.innerHTML += `<a href="${item.url}" class="${Selector.classes.categories.link}">${item.title}</a>`;
 
             if(item.children) {
                 const categoriesList = document.createElement("ul");
-                categoriesList.className = classes.children.list;
+                const categoriesNav = document.createElement("nav");
+                categoriesNav.className = Selector.classes.categories.children.nav;
+                categoriesList.className = Selector.classes.categories.children.list;
 
                 item.children.forEach((child) => {
-                    categoriesList.innerHTML += `<li class="${classes.children.item}">
-                        <a class="${classes.children.link}" href="${child.url}">${child.title}</a>
+                    categoriesList.innerHTML += `<li class="${Selector.classes.categories.children.item}">
+                        <a class="${Selector.classes.categories.children.link}" href="${child.url}">${child.title}</a>
                     </li>`
                 });
-
-                categoryItem.appendChild(categoriesList);
+                
+                categoriesNav.appendChild(categoriesList);
+                categoryItem.appendChild(categoriesNav);
             }
         
             return categoryItem;
-        }
+        },
+
     },
 };
 

@@ -4,17 +4,9 @@ import 'slick-carousel/slick/slick.scss';
 
 export default function Slider(options) {
     $(options.name).slick({
-        slidesToShow: options.slidesToShow ? options.slidesToShow : 1,
-        slidesToScroll: options.slidesToScroll ? options.slidesToScroll : 1,
-        arrows: options.arrows ? options.arrows : false,
-        dots: options.dots ? options.dots : false,
-        fade: options.fade ? options.fade : false,
-        asNavFor: options.sync ? options.sync.name : "",
+        ...options,
         nextArrow: '<button class="btn slick-arrow slick-next"><i class="fas fa-arrow-right"></i></button>',
-        prevArrow: '<button class="btn slick-arrow slick-prev"><i class="fas fa-arrow-left"></i></button>',
-        infinite: options.infinite ? options.infinite : false,
-        autoplay: options.autoplay ? options.autoplay : true,
-        autoplaySpeed: 3000
+        prevArrow: '<button class="btn slick-arrow slick-prev"><i class="fas fa-arrow-left"></i></button>'
     });
     
     if(options.sync) {
@@ -31,5 +23,4 @@ export default function Slider(options) {
             infinite: options.infinite ? options.infinite : false
         });
     }
-    
 }
