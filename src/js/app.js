@@ -6,19 +6,12 @@ import Selector from './selector';
 
 import Slider from './slider';
 import Category from './category';
+import { SliderSettings, ThumbSliderSettings } from './data'
 
 const app = {
     init: () => {
-        Slider({
-            arrows: false,
-            name: Selector.slider,
-            sync: {
-                name: Selector.thumbSlider,
-                slidesToShow: app.helpers.isDesktop() ? 5 : 1,
-                arrows: app.helpers.isDesktop() ? true : false,
-                asNavFor: Selector.slider
-            }
-        });
+        Slider(Selector.slider, SliderSettings);
+        Slider(Selector.thumbSlider, ThumbSliderSettings);
         // Load Categories
         Category.init();
     },

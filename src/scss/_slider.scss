@@ -12,15 +12,12 @@ $gutter: 1rem;
 .slider {
     margin-bottom: 1rem;
 
-    .slick-list {
-        border-radius: 3rem !important;
-    }
+    // .slick-list {
+    //     border-radius: 3rem !important;
+    // }
 }
 
 .thumb-slider {
-    margin-left: -$gutter;
-    margin-right: -$gutter;
-
     .slick-slide {
         .thumb-slider-item {
             padding-left: $gutter;

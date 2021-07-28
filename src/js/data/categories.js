@@ -1,4 +1,4 @@
-const categories = [{
+export default [{
         id: 1,
         title: "Elektronik",
         url: "#",
@@ -33,27 +33,27 @@ const categories = [{
         url: "#",
         children: [{
                 id: 10,
-                parent_id:1,
-                title:"Kalem",
-                url:"#"
+                parent_id: 1,
+                title: "Kalem",
+                url: "#"
             },
             {
                 id: 11,
-                parent_id:2,
-                title:"Silgi",
-                url:"#"
+                parent_id: 2,
+                title: "Silgi",
+                url: "#"
             },
             {
                 id: 12,
-                parent_id:3,
-                title:"Açacak",
-                url:"#"
+                parent_id: 3,
+                title: "Açacak",
+                url: "#"
             },
             {
                 id: 13,
-                parent_id:4,
-                title:"Defter",
-                url:"#"
+                parent_id: 4,
+                title: "Defter",
+                url: "#"
             }
 
         ]
@@ -89,7 +89,3 @@ const categories = [{
         url: "#"
     },
 ];
-
-export {
-    categories
-}
